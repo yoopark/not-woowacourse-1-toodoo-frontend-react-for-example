@@ -1,5 +1,8 @@
+import { HStack } from '@chakra-ui/react';
 import { useQuery } from '@tanstack/react-query';
 import ky from 'ky';
+
+import { Button } from '@/components/ui/button';
 
 type Todo = {
   userId: number;
@@ -30,10 +33,12 @@ const App = () => {
     return <div>No data...</div>;
   }
 
-  console.log(data);
-
   return (
     <>
+      <HStack>
+        <Button>Button</Button>
+        <Button variant="outline">Button</Button>
+      </HStack>
       <ul>
         {data.map((todo) => (
           <li key={todo.id}>{todo.title}</li>

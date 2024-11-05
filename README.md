@@ -6,6 +6,6 @@
 
 - React v18.3
 - TypeScript v5.6
-- Chakra UI
+- Chakra UI v3.1
 - Pnpm
 - Vite

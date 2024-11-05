@@ -1,5 +1,11 @@
+@font-face {
+  font-family: 'SUIT Variable';
+  src: url('/fonts/SUIT-Variable.woff2') format('woff2');
+  font-display: swap;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'SUIT Variable', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
