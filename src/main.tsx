@@ -1,6 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 import { App } from '@/App.tsx';
 
 import { Provider as ChakraUIProvider } from './components/ui/provider.tsx';
@@ -17,10 +19,14 @@ if (rootElement.hasChildNodes()) {
 
 const root = createRoot(rootElement);
 
+const queryClient = new QueryClient();
+
 root.render(
   <StrictMode>
     <ChakraUIProvider>
-      <App />
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
     </ChakraUIProvider>
   </StrictMode>,
 );
