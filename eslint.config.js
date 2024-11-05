@@ -10,7 +10,8 @@ export default tseslint.config(
   {
     ignores: [
       'dist',
-      'src/components/ui', // Chakra UI components (generated)
+      'src/components/ui', // generated code by Chakra UI components
+      '__generated__', // generated code by swagger-typescript-api
     ],
   },
   {
