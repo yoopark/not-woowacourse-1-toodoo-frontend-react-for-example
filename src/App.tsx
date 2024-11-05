@@ -1,5 +1,6 @@
-import { Button } from '@/components/ui/button';
 import { HStack } from '@chakra-ui/react';
+
+import { Button } from '@/components/ui/button';
 
 const App = () => {
   return (

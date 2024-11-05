@@ -1,6 +1,8 @@
-import { App } from '@/App.tsx';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+
+import { App } from '@/App.tsx';
+
 import { Provider as ChakraUIProvider } from './components/ui/provider.tsx';
 
 const rootElement = document.getElementById('root');
@@ -20,5 +22,5 @@ root.render(
     <ChakraUIProvider>
       <App />
     </ChakraUIProvider>
-  </StrictMode>
+  </StrictMode>,
 );

@@ -1,14 +1,16 @@
-import { Alert as ChakraAlert } from "@chakra-ui/react"
-import { CloseButton } from "./close-button"
-import { forwardRef } from "react"
+import { forwardRef } from 'react';
 
-export interface AlertProps extends Omit<ChakraAlert.RootProps, "title"> {
-  startElement?: React.ReactNode
-  endElement?: React.ReactNode
-  title?: React.ReactNode
-  icon?: React.ReactElement
-  closable?: boolean
-  onClose?: () => void
+import { Alert as ChakraAlert } from '@chakra-ui/react';
+
+import { CloseButton } from './close-button';
+
+export interface AlertProps extends Omit<ChakraAlert.RootProps, 'title'> {
+  startElement?: React.ReactNode;
+  endElement?: React.ReactNode;
+  title?: React.ReactNode;
+  icon?: React.ReactElement;
+  closable?: boolean;
+  onClose?: () => void;
 }
 
 export const Alert = forwardRef<HTMLDivElement, AlertProps>(
@@ -22,7 +24,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
       startElement,
       endElement,
       ...rest
-    } = props
+    } = props;
     return (
       <ChakraAlert.Root ref={ref} {...rest}>
         {startElement || <ChakraAlert.Indicator>{icon}</ChakraAlert.Indicator>}
@@ -46,6 +48,6 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
           />
         )}
       </ChakraAlert.Root>
-    )
+    );
   },
-)
+);
