@@ -15,7 +15,7 @@ const getTodos = async () => {
   return await ky<Todo[]>('https://jsonplaceholder.typicode.com/todos').json();
 };
 
-const App = () => {
+const RootPage = () => {
   const { isLoading, isError, data } = useQuery({
     queryKey: ['todos'],
     queryFn: getTodos,
@@ -48,4 +48,4 @@ const App = () => {
   );
 };
 
-export { App };
+export { RootPage };
