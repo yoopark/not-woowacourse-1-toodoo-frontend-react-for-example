@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate-react",
+  "name": "toodoo-frontend-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,8 +12,7 @@
     "format": "prettier --write .",
     "sta": "sta -p https://not-woowacourse-api.yopark.dev/api-docs-json -o __generated__ --modular --axios --extract-request-params --extract-request-body --extract-response-body --extract-response-error",
     "update-deps": "ncu -u && pnpm i",
-    "prepare": "is-ci || husky",
-    "chakra-typegen": "npx @chakra-ui/cli typegen ./src/theme.ts"
+    "prepare": "is-ci || husky"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.1.0",
