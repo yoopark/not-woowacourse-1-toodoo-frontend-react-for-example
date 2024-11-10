@@ -1,4 +1,4 @@
-# 구현과제 1. Toodoo (React 버전)
+# 구현과제 1. Toodoo (React)
 
 > [기존 구현과제 1](https://github.com/not-woowacourse/1-toodoo-frontend)과 내용은 동일하되, 기술 스택에만 차이가 있습니다.
 
@@ -43,8 +43,8 @@ API 주소 : https://not-woowacourse-api.yopark.dev
 
 ## 구현해야 할 기능
 
-> Toodoo 시연 링크 :  
-> Toodoo 시연 레포 : 
+> Toodoo (React) 시연 링크 : https://not-woowacourse-1-toodoo-frontend-react-for-example.vercel.app   
+> Toodoo (React) 시연 레포 : https://github.com/yoopark/not-woowacourse-1-toodoo-frontend-react-for-example
 
 할 일 조회하기
 
