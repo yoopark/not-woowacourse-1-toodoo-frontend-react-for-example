@@ -1,46 +1,39 @@
-import { isRouteErrorResponse, useRouteError } from 'react-router-dom';
+import { IoWarning } from 'react-icons/io5';
+import {
+  isRouteErrorResponse,
+  useNavigate,
+  useRouteError,
+} from 'react-router-dom';
 
-// 이게 최선일까? Type narrowing 깔끔하게 하는 방법 ...
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface RouterError extends Error {}
+import { Icon, Text, VStack } from '@chakra-ui/react';
 
-/**
- * @See {@link https://github.com/remix-run/react-router/discussions/9628#discussioncomment-7796431}
- */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const isRouterError = (error: any): error is RouterError => {
-  return 'message' in error;
-};
-
-const getErrorMessage = (error: unknown): string => {
-  if (isRouteErrorResponse(error)) {
-    return `${error.status} ${error.statusText}`;
-  }
-
-  if (isRouterError(error)) {
-    return error.message;
-  }
-
-  if (typeof error === 'string') {
-    return error;
-  }
-
-  return 'An unexpected error has occurred';
-};
+import { Button } from '@/components/ui/button';
 
 const ErrorPage = () => {
   const error = useRouteError();
+  const navigate = useNavigate();
 
-  const errorMessage = getErrorMessage(error);
+  if (!isRouteErrorResponse(error)) {
+    throw error;
+  }
 
   return (
-    <div>
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{errorMessage}</i>
-      </p>
-    </div>
+    <VStack align="center" justify="center" minH="100vh" gap={20}>
+      <VStack align="center" justify="center" gap={1}>
+        <Icon fontSize="4xl" color="red.500">
+          <IoWarning />
+        </Icon>
+        <Text fontSize="4xl" fontWeight="bold" color="red.500">
+          {error.status}
+        </Text>
+        <Text fontSize="2xl" fontWeight="medium" color="gray.500">
+          {error.statusText}
+        </Text>
+      </VStack>
+      <Button variant="outline" onClick={() => navigate(-1)}>
+        이전 페이지로 돌아가기
+      </Button>
+    </VStack>
   );
 };
 

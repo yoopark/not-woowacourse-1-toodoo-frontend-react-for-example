@@ -7,7 +7,7 @@
 :root {
   font-family: 'SUIT Variable', sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  letter-spacing: -0.025em;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
