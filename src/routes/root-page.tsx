@@ -1,13 +1,17 @@
-import { Text, VStack } from '@chakra-ui/react';
+import { Container, Stack, Text } from '@chakra-ui/react';
+
+import { TodoFetcher } from '@/routes-features/root-page/todo/todo-fetcher';
 
 const RootPage = () => {
   return (
-    <VStack align="center" justify="center" minH="100vh">
-      <Text fontSize="8xl">👋</Text>
-      <Text fontSize="4xl" fontWeight="semibold">
-        안녕하세요
-      </Text>
-    </VStack>
+    <Container maxW="xl" px={2} py={4}>
+      <Stack gap={8}>
+        <Text as="h1" fontSize="2xl" fontWeight="semibold">
+          Reminders 📝
+        </Text>
+        <TodoFetcher />
+      </Stack>
+    </Container>
   );
 };
 
