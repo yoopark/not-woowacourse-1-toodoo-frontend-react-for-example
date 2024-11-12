@@ -1,5 +1,6 @@
 import { HStack, Stack, Text } from '@chakra-ui/react';
 
+import { TodoListItemDeleteAction } from '@/routes-features/root-page/todo/todo-list-item-delete-action';
 import { TodoListItemUpdateAction } from '@/routes-features/root-page/todo/todo-list-item-update-action';
 import { type Todo } from '@/types/entity';
 
@@ -29,7 +30,10 @@ const TodoListItem = ({ todo }: TodoListItemProps) => {
           </Text>
         )}
       </Stack>
-      <TodoListItemUpdateAction todo={todo} />
+      <HStack gap={0}>
+        <TodoListItemUpdateAction todo={todo} />
+        <TodoListItemDeleteAction todoId={todo.id} />
+      </HStack>
     </HStack>
   );
 };
