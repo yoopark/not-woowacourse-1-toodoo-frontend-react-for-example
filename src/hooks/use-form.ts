@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
-const useForm = <T>(params: { initialValues: T }) => {
+const useForm = <T extends Record<string, unknown>>(params: {
+  initialValues: T;
+}) => {
   const { initialValues } = params;
 
   const [values, setValues] = useState<T>(initialValues);
@@ -15,7 +17,11 @@ const useForm = <T>(params: { initialValues: T }) => {
     setValues(initialValues);
   };
 
-  return { values, handleChange, reset };
+  const isDirty = Object.entries(values).some(
+    ([key, value]) => value !== initialValues[key],
+  );
+
+  return { values, handleChange, isDirty, reset };
 };
 
 export { useForm };
