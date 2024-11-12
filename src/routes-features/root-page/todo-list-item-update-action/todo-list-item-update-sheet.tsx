@@ -19,7 +19,7 @@ import { toaster } from '@/components/ui/toaster';
 import { QUERY_KEYS } from '@/constants/query-keys';
 import { useForm } from '@/hooks/use-form';
 import { kyPatchTodo } from '@/lib/ky/request';
-import { type Todo } from '@/types/entity';
+import { type Todo } from '@/types/entities/todo';
 
 type TodoListItemUpdateSheetProps = {
   trigger: React.ReactNode;

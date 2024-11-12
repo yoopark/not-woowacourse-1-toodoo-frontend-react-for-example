@@ -9,7 +9,7 @@ import {
 import { ShowAlreadyDoneSwitch } from '@/routes-features/root-page/todo-fetcher/show-already-done-switch';
 import { TodoList } from '@/routes-features/root-page/todo-fetcher/todo-list';
 import { TodoResultDescriptor } from '@/routes-features/root-page/todo-fetcher/todo-result-descriptior';
-import { type Todo } from '@/types/entity';
+import { type Todo } from '@/types/entities/todo';
 
 type TodoResultProps = {
   result: Todo[];

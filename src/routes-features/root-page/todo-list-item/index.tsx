@@ -3,7 +3,7 @@ import { HStack, Stack, Text } from '@chakra-ui/react';
 import { TodoListItemDeleteAction } from '@/routes-features/root-page/todo-list-item-delete-action';
 import { TodoListItemDoneAction } from '@/routes-features/root-page/todo-list-item-done-action';
 import { TodoListItemUpdateAction } from '@/routes-features/root-page/todo-list-item-update-action';
-import { type Todo } from '@/types/entity';
+import { type Todo } from '@/types/entities/todo';
 
 type TodoListItemProps = {
   todo: Todo;

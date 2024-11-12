@@ -1,4 +1,4 @@
-import { type Todo } from '@/types/entity';
+import { type Todo } from '@/types/entities/todo';
 
 type PostTodoRequestDto = Pick<Todo, 'title'>;
 
