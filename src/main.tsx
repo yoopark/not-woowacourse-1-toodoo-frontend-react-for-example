@@ -5,11 +5,10 @@ import { RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-import { Toaster } from '@/components/ui/toaster.tsx';
+import { Provider as ChakraUIProvider } from '@/components/ui/provider';
+import { Toaster } from '@/components/ui/toaster';
 import '@/index.css';
-import { router } from '@/router.tsx';
-
-import { Provider as ChakraUIProvider } from './components/ui/provider.tsx';
+import { router } from '@/router';
 
 const rootElement = document.getElementById('root');
 

@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { QUERY_KEYS } from '@/constants/query-keys';
 import { kyGetTodos } from '@/lib/ky/request';
-import { TodoResult } from '@/routes-features/root-page/todo/todo-fetcher/todo-result';
+import { TodoResult } from '@/routes-features/root-page/todo-fetcher/todo-result';
 
 const TodoFetcher = () => {
   const { isLoading, isError, data } = useQuery({

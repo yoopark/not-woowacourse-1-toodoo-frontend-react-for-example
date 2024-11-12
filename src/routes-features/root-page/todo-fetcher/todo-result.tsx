@@ -6,9 +6,9 @@ import {
   type SwitchCheckedChangeDetails,
 } from '@chakra-ui/react';
 
-import { ShowAlreadyDoneSwitch } from '@/routes-features/root-page/todo/todo-fetcher/show-already-done-switch';
-import { TodoList } from '@/routes-features/root-page/todo/todo-fetcher/todo-list';
-import { TodoResultDescriptor } from '@/routes-features/root-page/todo/todo-fetcher/todo-result-descriptior';
+import { ShowAlreadyDoneSwitch } from '@/routes-features/root-page/todo-fetcher/show-already-done-switch';
+import { TodoList } from '@/routes-features/root-page/todo-fetcher/todo-list';
+import { TodoResultDescriptor } from '@/routes-features/root-page/todo-fetcher/todo-result-descriptior';
 import { type Todo } from '@/types/entity';
 
 type TodoResultProps = {

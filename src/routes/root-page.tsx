@@ -1,7 +1,7 @@
 import { Container, Stack, Text } from '@chakra-ui/react';
 
-import { CreateTodoAction } from '@/routes-features/root-page/todo/create-todo-action';
-import { TodoFetcher } from '@/routes-features/root-page/todo/todo-fetcher';
+import { CreateTodoAction } from '@/routes-features/root-page/create-todo-action';
+import { TodoFetcher } from '@/routes-features/root-page/todo-fetcher';
 
 const NICKNAME = '용준';
 

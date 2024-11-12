@@ -1,8 +1,8 @@
 import { HStack, Stack, Text } from '@chakra-ui/react';
 
-import { TodoListItemDeleteAction } from '@/routes-features/root-page/todo/todo-list-item-delete-action';
-import { TodoListItemDoneAction } from '@/routes-features/root-page/todo/todo-list-item-done-action';
-import { TodoListItemUpdateAction } from '@/routes-features/root-page/todo/todo-list-item-update-action';
+import { TodoListItemDeleteAction } from '@/routes-features/root-page/todo-list-item-delete-action';
+import { TodoListItemDoneAction } from '@/routes-features/root-page/todo-list-item-done-action';
+import { TodoListItemUpdateAction } from '@/routes-features/root-page/todo-list-item-update-action';
 import { type Todo } from '@/types/entity';
 
 type TodoListItemProps = {

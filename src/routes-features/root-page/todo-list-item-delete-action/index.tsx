@@ -3,7 +3,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { toaster } from '@/components/ui/toaster';
 import { QUERY_KEYS } from '@/constants/query-keys';
 import { kyDeleteTodo } from '@/lib/ky/request';
-import { TodoListItemDeleteButton } from '@/routes-features/root-page/todo/todo-list-item-delete-action/todo-list-item-delete-button';
+import { TodoListItemDeleteButton } from '@/routes-features/root-page/todo-list-item-delete-action/todo-list-item-delete-button';
 
 type TodoListItemDeleteActionProps = {
   todoId: number;

@@ -1,6 +1,6 @@
 import { Stack } from '@chakra-ui/react';
 
-import { TodoListItem } from '@/routes-features/root-page/todo/todo-list-item';
+import { TodoListItem } from '@/routes-features/root-page/todo-list-item';
 import { type Todo } from '@/types/entity';
 
 type TodoListProps = {
