@@ -1,24 +1,26 @@
+import { Text } from '@chakra-ui/react';
 import { useQuery } from '@tanstack/react-query';
 
+import { QUERY_KEYS } from '@/constants/query-keys';
 import { kyGetTodos } from '@/lib/ky/request';
 import { TodoResult } from '@/routes-features/root-page/todo/todo-fetcher/todo-result';
 
 const TodoFetcher = () => {
   const { isLoading, isError, data } = useQuery({
-    queryKey: ['todos'],
-    queryFn: () => kyGetTodos(),
+    queryKey: QUERY_KEYS.TODOS,
+    queryFn: kyGetTodos, // () => kyGetTodos() 중에 뭐가 좋을까? 다른건가? Post에서는 다르던데.
   });
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Text>Loading...</Text>;
   }
 
   if (isError) {
-    return <div>Error</div>;
+    return <Text>Error</Text>;
   }
 
   if (data === undefined) {
-    return <div>No data</div>;
+    return <Text>No data</Text>;
   }
 
   return <TodoResult result={data} />;

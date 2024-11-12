@@ -6,7 +6,7 @@ type TodoListItemProps = {
   todo: Todo;
 };
 
-const TodoListItem = ({ todo }: TodoListItemProps) => {
+const TodoListItem = ({ todo: { title, description } }: TodoListItemProps) => {
   return (
     <Stack
       as="li"
@@ -17,10 +17,12 @@ const TodoListItem = ({ todo }: TodoListItemProps) => {
       border="1px solid"
       borderColor="gray.100"
     >
-      <Text fontWeight="semibold">{todo.title}</Text>
-      <Text fontSize="sm" color="gray.600" fontWeight="light">
-        {todo.description}
-      </Text>
+      <Text fontWeight="semibold">{title}</Text>
+      {description !== null && (
+        <Text fontSize="sm" color="gray.600" fontWeight="light">
+          {description}
+        </Text>
+      )}
     </Stack>
   );
 };

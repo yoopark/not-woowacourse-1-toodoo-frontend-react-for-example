@@ -11,7 +11,11 @@ const useForm = <T>(params: { initialValues: T }) => {
     setValues((prev) => ({ ...prev, [name]: value }));
   };
 
-  return { values, handleChange };
+  const reset = () => {
+    setValues(initialValues);
+  };
+
+  return { values, handleChange, reset };
 };
 
 export { useForm };

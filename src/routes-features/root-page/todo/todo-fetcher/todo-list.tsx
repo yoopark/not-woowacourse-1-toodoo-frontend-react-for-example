@@ -9,7 +9,7 @@ type TodoListProps = {
 
 const TodoList = ({ todos }: TodoListProps) => {
   return (
-    <Stack as="ul">
+    <Stack as="ul" overflowY="auto" maxH="70vh">
       {todos.map((todo) => (
         <TodoListItem key={todo.id} todo={todo} />
       ))}

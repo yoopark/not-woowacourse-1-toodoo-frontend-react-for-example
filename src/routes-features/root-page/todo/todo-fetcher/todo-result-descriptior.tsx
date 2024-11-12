@@ -16,8 +16,14 @@ const TodoResultDescriptor = ({
 
     return (
       <Text fontSize="sm" fontWeight="light">
-        총 <strong>{notDoneCount.toLocaleString()}개</strong>의 할 일이
-        남아있습니다. 지금까지 <strong>{doneLength.toLocaleString()}개</strong>
+        총{' '}
+        <Text as="span" fontWeight="semibold">
+          {notDoneCount.toLocaleString()}개
+        </Text>
+        의 할 일이 남아있습니다. 지금까지{' '}
+        <Text as="span" fontWeight="semibold">
+          {doneLength.toLocaleString()}개
+        </Text>
         의 할 일을 완료했습니다.
       </Text>
     );
@@ -25,7 +31,11 @@ const TodoResultDescriptor = ({
 
   return (
     <Text fontSize="sm" fontWeight="light">
-      총 <strong>{notDoneCount.toLocaleString()}개</strong>의 할 일이 있습니다.
+      총{' '}
+      <Text as="span" fontWeight="semibold">
+        {notDoneCount.toLocaleString()}개
+      </Text>
+      의 할 일이 있습니다.
     </Text>
   );
 };
