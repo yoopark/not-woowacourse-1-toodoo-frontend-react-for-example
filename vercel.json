@@ -3,6 +3,10 @@
     {
       "source": "/backend-api/:path*",
       "destination": "https://not-woowacourse-api.yopark.dev/:path*"
+    },
+    {
+      "source": "/[^.]+",
+      "destination": "/"
     }
   ]
 }
