@@ -5,7 +5,7 @@
       "destination": "https://not-woowacourse-api.yopark.dev/:path*"
     },
     {
-      "source": "/[^.]+",
+      "source": "/(.*)",
       "destination": "/"
     }
   ]
